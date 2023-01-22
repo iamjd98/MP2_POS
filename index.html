@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Sulphur Point' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>POS</title>
+</head>
+<body>
+
+    
+<div class="back-ground container-fluid row">
+    <div class="mx-auto col-sm-8 m-3 bg-light rounded">
+        <div class="row">
+            <div class="col-6 d-flex justify-content-start align-items-center">
+                <h1>MyPOS</h1>
+            </div>
+
+            <div class="col-6 d-flex justify-content-end align-items-center ">
+                <h4 id="current-time"></h4>
+            </div>
+
+            <div class="col-12">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home">Foods</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu1">Drinks & Beverages</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-bs-toggle="tab" href="#menu2">Desserts</a>
+                    </li>
+                </ul>
+                
+                <!-- Tab panes -->
+                <div class="tab-content" id="pills-TabContent">
+                    <div id="home" class="container fade show tab-pane active" role="tabpanel" aria-labelledby="pills-food-tab"><br>
+                    
+                    <h3>Foods</h3>  
+
+                    <div id="selection" class="container-fluid row pt-3 pb-3 pe-0 ps-0 rounded mt-4 d-flex justify-content-center" style="background-color: rgba(51, 51, 51, 0.164);">
+
+                   
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(01, 'Lechon Belly', 269);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Lechon Belly</h5>
+                            <p>P269</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(02, 'Pork Sisig', 169);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Pork Sisig</h5>
+                            <p>P169</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(03, 'Corn Soup', 69);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Corn Soup</h5>
+                            <p>P69</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(04, 'Lechon Baka', 369);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Lechon Baka</h5>
+                            <p>P369</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(05,'Fried Chicken', 139);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Fried Chicken</h5>
+                            <p>P139</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(06, 'Lomi', 119);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Lomi</h5>
+                            <p>P119</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(07, 'Dinuguan', 99);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Dinuguan</h5>
+                            <p>P99</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(08, 'Pancit', 119);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Pancit</h5>
+                            <p>P119</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(09,'Chopsuey', 119);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Chopsuey</h5>
+                            <p>P119</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(010, 'Cebu Balbacua', 149);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Balbacua</h5>
+                            <p>P149</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(011, 'Lumpia', 69);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Lumpia</h5>
+                            <p>P69</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(012, 'Sinigang', 119);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Sinigang</h5>
+                            <p>P119</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(013, 'Seafood Boil', 499);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Seafood-Boil</h5>
+                            <p>P499</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(014, 'Shrimp Gambas', 99);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Shrimp</h5>
+                            <p>P99</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(015, 'Crabs', 199);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Crabs</h5>
+                            <p>P199</p>
+                            </div>
+                        </div>
+
+                        <div  class="col-sm-6 card m-2" style="width: 11rem; height: 15rem;" onclick="orderbasket(016, 'Kaldereta', 249);">
+                            <img draggable="false" src="./assets/lechon_belly.jpg" class="card-img-top mt-3" alt="food">
+                            <div class="card-body">
+                            <h5 class="card-title">Kaldereta</h5>
+                            <p>P249</p>
+                            </div>
+                        </div>
+                        
+
+                    </div>      
+
+                </div>
+
+
+                    <div id="menu1" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-drinks-tab"><br>
+                    <h3>Drinks & Beverages</h3>
+                    </div>
+
+
+                    <div id="menu2" class="container tab-pane fade" role="tabpanel" aria-labelledby="pills-desserts-tab"><br>
+                    <h3>Desserts</h3>
+                    </div>
+                </div>  
+            </div>    
+        </div>
+    </div>
+
+    <div class="mx-auto col-sm-3 m-3 bg-light rounded">
+        <div><center><h4 class="m-3">Order Summary</h4></center></div>
+        <center><div class="line mb-3"></div></center>
+
+        <div class="selected-items">
+        <div class="order-list">
+            <h6 class="d-flex justify-content-between align-items-center ms-2 me-2">Order #: 00399 <span><button onclick="orderbasketclear(); audio.play();" class="btn btn-danger btn-sm">Clear</button></span></h6>
+            <div class="card pt-5 mx-auto"> 
+                <ul id="orderlist" class="list-unstyled">
+                    <li class="d-flex justify-content-between align-items-center">
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        </div>
+
+        <div>
+            <ul class="list-unstyled">
+                <li class="d-flex justify-content-between align-items-center">
+                    <h5 class="mt-2 fw-bold">Total Amount:</h5><h5 class="me-4 fw-bold" >₱<span id="totalcost">0.00</span></h5>
+                </li>
+                <li>
+                    <h5 id="noitems" class="mt-3 fw-bold">Total items: <span id="totalitems"></span></h5>
+                </li>
+            </ul> 
+        </div>
+
+        <div>
+            <button class="btn btn-success btn-lg w-100 m-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>
+
+            <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                       
+                           <div class="row mb-2">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Customer No.</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-lg text-center" id="customername" placeholder="Enter Customer No.">
+                            </div>
+                           </div> 
+
+                           <div class="row mb-2">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Amount to Pay:</label>
+                            <div class="col-sm-8">
+                                <input type="number" step="0.01" class="form-control fw-bold form-control-lg text-center" id="amount" placeholder="Amount to be Paid" disabled>
+                            </div>
+                           </div>
+                           
+                           <div class="row mb-2">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Cash Amount:</label>
+                            <div class="col-sm-8">
+                                <input value="0" type="number" step="0.01" class="form-control  fw-bold form-control-lg text-center" id="customeramountpaid" placeholder="Cash Amount" disabled>
+                            </div>
+                           </div>
+
+                           <div class="row mb-2">
+                            <label for="colFormLabelLg" class="col-sm-4 col-form-label col-form-label-lg">Change</label>
+                            <div class="col-sm-8">
+                                <input id="amountchange" type="number" step="0.01" class="form-control text-danger fw-bold form-control-lg text-center"  placeholder="Change Amount" disabled>
+                            </div>
+                           </div>
+
+                           <hr>
+
+
+                           <div class="container-fluid mx-auto row">
+
+                            <div class="col-12 mb-3">
+                                <input id="calculatorscreen" value="0" type="text" class="bg-dark w-100 text-white text-end form-control form-control-md">
+                            </div>
+
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('9')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">9</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('8')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">8</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('7')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">7</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('6')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">6</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('5')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">5</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('4')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">4</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('3')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">3</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('2')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">2</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('1')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">1</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('.')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">.</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('0')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">0</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorpress('00')" style="width:100px" class="text-dark fw-bold btn bg-warning rounded-pill text-center mb-1">00</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="calculatorcancel()" style="width:100px" class="text-white fw-bold btn bg-danger rounded-pill text-center mb-1">delete</button></div>
+                            <div class="col-4 d-flex justify-content-center"><button onclick="exactamount()" style="width:100px" class="text-white fw-bold btn bg-success rounded-pill text-center mb-1">Exact</button></div>
+                            <hr>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('100')" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">100</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('200')" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">200</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('500')" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">500</button></div>
+                            <div class="col-3 d-flex justify-content-center"><button onclick="calculatorpress('1000')" style="width:100px" class="text-white btn bg-dark rounded-pill text-center mb-1">1000</button></div>
+                        
+
+
+                        </div>
+                        <div class="modal-footer">
+                        <div class="container-{breakpoint} row">
+                        <div class="col-sm-3"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel Order</button></div>
+                        <div class="col-sm-3"><button  id="confirmpaid" onclick="confirmpaidbutton()" type="button" class="btn btn-primary">Confirm Payment</button></div>
+                        <div class="col-sm-3"><button  id="printbutton" onclick="confirmpaidbutton()" type="button" class="btn btn-primary">Print Receipt</button></div>
+                        <div class="col-sm-3"><button  id="nextcustomerbutton" onclick="confirmpaidbutton()" type="button" class="btn btn-primary">Next Customer</button></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+    
+</div>
+
+
+
+<script src="myjs.js"></script>    
+</body>
+</html>
